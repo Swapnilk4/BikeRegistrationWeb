@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <table class="table table-bordered table-inverse">
       <tr>
         <th>Owner Name</th>
@@ -20,5 +20,37 @@
           {{bike.purchasePrice}}
         </td>
       </tr>
-    </table>
+    </table> 
+  </div>-->
+
+
+  <div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Owner Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Model</th>
+        <th scope="col">Purchase Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bike of bikes">
+        <td>
+          {{bike.name}}
+        </td>
+        <td>
+          {{bike.email}}
+        </td>
+        <td>
+          {{bike.model}}
+        </td>
+        <td class="text-right">
+          {{bike.purchasePrice}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
   </div>
+  
