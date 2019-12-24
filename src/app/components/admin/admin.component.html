@@ -32,10 +32,11 @@
         <th scope="col">Email</th>
         <th scope="col">Model</th>
         <th scope="col">Purchase Price</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let bike of bikes">
+      <tr *ngFor="let bike of bikes" >
         <td>
           {{bike.name}}
         </td>
@@ -45,8 +46,11 @@
         <td>
           {{bike.model}}
         </td>
-        <td class="text-right">
+        <td >
           {{bike.purchasePrice}}
+        </td>
+        <td >
+          <span (click)="recordClick(bike.id)">Edit</span>/<span (click)="deleteCall(bike.id)">Delete</span>  
         </td>
       </tr>
     </tbody>
